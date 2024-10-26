@@ -11,6 +11,12 @@
 # production
 /build
 
+
+#/deployment key of public as well private key
+/main
+/main.pub
+
+
 # misc
 .DS_Store
 .env.local
