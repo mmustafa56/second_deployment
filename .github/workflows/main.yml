@@ -1,4 +1,4 @@
-name:  Second Deployment into the github pages ci/cd pipeline
+name: Deployment react app
 on:
   push:
     branches:
@@ -10,7 +10,7 @@ jobs:
       matrix:
         node-version: [12.x]
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
