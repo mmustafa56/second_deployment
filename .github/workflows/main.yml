@@ -1,4 +1,4 @@
-name:  Second Deployment into the github pages ci/cd pipeline
+name: Deployment react app
 on:
   push:
     branches:
@@ -10,7 +10,7 @@ jobs:
       matrix:
         node-version: [12.x]
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -22,5 +22,5 @@ jobs:
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{secrets.ACTIONS_DEPLOY_KEY}}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./build
